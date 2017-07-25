@@ -6,9 +6,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var app = express();
 
 
-/* Using the sessions */
+/* Using sessions */
 app.use(session({secret: 'todotopsecret'}))
-
 
 /* If there is no to do list in the session, 
 we create an empty one in the form of an array before continuing */
@@ -19,12 +18,12 @@ we create an empty one in the form of an array before continuing */
     next();
 })
 
-/* The to do list and the form are displayed */
-.get('/todo', function(req, res) { 
+/* Route management below
+   ....                         */
+
+.get('/todo', function(req, res) {
     res.render('todo.ejs', {todolist: req.session.todolist});
 })
-
-/* Adding an item to the to do list */
 .post('/todo/add/', urlencodedParser, function(req, res) {
     if (req.body.newtodo != '') {
         req.session.todolist.push(req.body.newtodo);
@@ -44,5 +43,4 @@ we create an empty one in the form of an array before continuing */
 .use(function(req, res, next){
     res.redirect('/todo');
 })
-
 .listen(8080);   
