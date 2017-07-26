@@ -1,13 +1,11 @@
 {
-    "name": "nodejs-cms",
+    "name": "super-chat",
     "version": "0.1.0",
     "dependencies": {
-        "body-parser": "~1.10.1",
-        "cookie-session": "~1.1.0",
-        "ejs": "~2.1.4",
-        "express": "~4.11.0",
-        "socket.io": "^2.0.3"
+        "ent": "^0.1.0",
+        "express": "^3.3.8",
+        "socket.io": "^1.2.1"
     },
-    "author": "Mateo21 <mateo21@email.com>",
-    "description": "A very basic to do list manager"
+    "author": "Jk <evergreenjk@gmail.com>",
+    "description": "A real-time super chat with socket .io"
 }
