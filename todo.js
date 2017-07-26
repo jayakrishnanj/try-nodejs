@@ -31,6 +31,11 @@ we create an empty one in the form of an array before continuing */
     res.redirect('/todo');
 })
 
+.get('/todo/edit/:id', urlencodedParser, function(req, res) {
+        res.render('edit-todo.ejs', {todolistId:  req.session.todolist[req.params.id]});
+        //res.redirect('/todo');
+})
+
 /* Deletes an item from the to do list */
 .get('/todo/delete/:id', function(req, res) {
     if (req.params.id != '') {
