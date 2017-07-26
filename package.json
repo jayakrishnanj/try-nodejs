@@ -2,10 +2,11 @@
     "name": "nodejs-cms",
     "version": "0.1.0",
     "dependencies": {
-        "express": "~4.11.0",
-        "ejs": "~2.1.4",
+        "body-parser": "~1.10.1",
         "cookie-session": "~1.1.0",
-        "body-parser": "~1.10.1"
+        "ejs": "~2.1.4",
+        "express": "~4.11.0",
+        "socket.io": "^2.0.3"
     },
     "author": "Mateo21 <mateo21@email.com>",
     "description": "A very basic to do list manager"
